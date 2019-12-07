@@ -27,6 +27,7 @@
 		81279443239BEC4D000EBED0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81279445239BEC4D000EBED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81279446239BEC4D000EBED0 /* IntroToSpriteKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IntroToSpriteKit.entitlements; sourceTree = "<group>"; };
+		8127944C239BEC6A000EBED0 /* IntroToSpriteKit.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = IntroToSpriteKit.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +44,7 @@
 		8127942A239BEC4C000EBED0 = {
 			isa = PBXGroup;
 			children = (
+				8127944C239BEC6A000EBED0 /* IntroToSpriteKit.playground */,
 				81279435239BEC4C000EBED0 /* IntroToSpriteKit */,
 				81279434239BEC4C000EBED0 /* Products */,
 			);

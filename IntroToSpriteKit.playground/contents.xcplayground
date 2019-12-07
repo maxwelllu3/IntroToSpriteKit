@@ -3,6 +3,7 @@
     <pages>
         <page name='UIKit vs SpriteKit'/>
         <page name='Creating a SpriteKit Scene'/>
+        <page name='Positioning Sprites'/>
         <page name='Old tutorial'/>
     </pages>
 </playground>

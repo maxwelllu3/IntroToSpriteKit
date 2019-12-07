@@ -49,5 +49,5 @@ PlaygroundSupport.PlaygroundPage.current.liveView = view
  
  Notice that the node count is 1. That node is the scene itself.
  
-[Previous: UIKit vs. SpriteKit](@previous) | Page 2 | [Next: Creating a SpriteKit Scene](@next)
+[Previous: UIKit vs. SpriteKit](@previous) | Page 2 | [Next: Positioning Sprites](@next)
 */

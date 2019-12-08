@@ -25,13 +25,13 @@ PlaygroundSupport.PlaygroundPage.current.liveView = view
 /*:
  ### Setting the scene
  
- In the code below, a node that contains a cliff and a bit of a ramp are positioned at the bottom left corner of the scene.
+ In the code below, a node that will show up as a hill is positioned to appear in the bottom left corner of the scene.
  
- A boulder is positioned near the top left corner of the screen.
+ A node that will show up as a boulder is positioned near the top left corner of the screen.
  
- Some crates are stacked at the bottom of the hill.
+ Six nodes that will create a pyramid of crates are positioned at the bottom of the hill.
  
- And yes, all of these graphics are hand-drawn by Mr. Gordon – the artist who brought you the camelCase camel:
+ And *yes indeed*, all of these graphics are drawn by Mr. Gordon – the artist who brought you the camelCase camel:
  
  ![camelCase](camelCase.jpeg)
  

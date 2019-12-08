@@ -44,13 +44,12 @@ PlaygroundSupport.PlaygroundPage.current.liveView = view
 
 // Create and position a boulder sprite near the top left corner of the screen
 let boulder = SKSpriteNode(imageNamed: "boulder")
-boulder.position = CGPoint(x: 50, y: scene.size.height - 25)
+boulder.position = CGPoint(x: 56, y: scene.size.height - boulder.size.height / 2)
 scene.addChild(boulder)
 
 // Create and position the hill
 let hill = SKSpriteNode(imageNamed: "hill")
-hill.anchorPoint = CGPoint(x: 0, y: 0)      // Position sprite via it's bottom left corner, instead of                                            // it's centre point
-hill.position = CGPoint(x: 0, y: 0)
+hill.position = CGPoint(x: hill.size.width / 2, y: hill.size.height / 2)
 scene.addChild(hill)
 
 // Position six crates in a pyramid
@@ -78,13 +77,12 @@ for i in 1...3 {
  */
 //// Add a physics body for the hill
 //hill.physicsBody = SKPhysicsBody(texture: hill.texture!,
-//                                 alphaThreshold: 0.2,
+//                                 alphaThreshold: 0.5,
 //                                 size: hill.size)
+//hill.physicsBody?.isDynamic = false // Hill will not move (not impacted by physics)
 
 //// Add a physics body for the boulder
-//boulder.physicsBody = SKPhysicsBody(texture: boulder.texture!,
-//                                    alphaThreshold: 0.2,
-//                                    size: boulder.size)
+//boulder.physicsBody = SKPhysicsBody(circleOfRadius: boulder.size.width * 0.5)
 
 //// Add a physics body for all nodes with identifier "one of the crates"
 //for node in scene.children {
@@ -96,19 +94,80 @@ for i in 1...3 {
 //        if thisNode.name == "one of the crates" {
 //
 //            // Add a physics body
-//            thisNode.physicsBody = SKPhysicsBody(texture: thisNode.texture!,
-//                                                 alphaThreshold: 0.2,
-//                                                 size: thisNode.size)
-//
+//            thisNode.physicsBody = SKPhysicsBody(rectangleOf: thisNode.size)
 //        }
 //
 //    }
 //
 //}
 
+//// Configure the view so that physics body edges are visible
+//view.showsPhysics = true
+
+/*:
+ ### Other types of physics bodies
+ 
+ The results at this point in our animation are less than optimal!
+ 
+ A bit more about physics bodies. There are *multiple types* of physics bodies that can be used.
+ 
+ The physics bodies added to the boulder, the hill, and the crates – they are **dynamic** physics bodies. Each body moves, is solid, has mass, can collide with any other type of physics body, and responds to forces – like gravity. Dynamic physics are impacted by the physics engine – unless we tell the body not to be (like with the hill – look closely at the code above around line 83.
+ 
+ Do you see what's happening?
+ 
+ We need to define another type of physics body.
+ 
+ The **edge-loop** physics body is a *static*, volume-less physics body. As the name implies, this type of body defines only the edges of the shape. The body has no mass, cannot collide with other edge loop bodies, and is not moved by the physics engine (but can be moved by *actions* – more on that later).
+ 
+ When you need a boundary for your game or animation – the ground, a wall – you will use an edge-loop body to define a collision area.
+   
+ ![example](types-of-physics-bodies.png "Types of physics bodies")
+ 
+  *Image from:* [2D Apple Games by Tutorials, raywenderlich.com](https://store.raywenderlich.com/products/2d-apple-games-by-tutorials)
+
+ - Callout(Experiment):
+    Try uncommenting the section below.
+ 
+    Now what happens?
+
+ */
+
+//// Make an edge loop at the boundaries of the scene
+//scene.physicsBody = SKPhysicsBody(edgeLoopFrom: scene.frame)
+
 /*:
  - Callout(Reflect):
      What type of animations could you imagine creating using the SpriteKit Physics engine? What types of games?
+ 
+ ### Refining the Simulation
+ 
+ The results of the boulder rolling down the hill are not quite true to life, yet.
+ 
+ A boulder has a lot of mass.
+ 
+ Wooden crates have mass, but not as much.
+ 
+ The boulder should move the crates more!
+ 
+ So how can we make this happen?
+ 
+ The SKPhysicsBody class [has properties](https://developer.apple.com/documentation/spritekit/skphysicsbody) (see "Defining a Physics Body’s Physical Properties") that let you [set the characteristics of a physics body](https://developer.apple.com/documentation/spritekit/skphysicsbody/configuring_a_physics_body).
+ 
+ - Experiment:
+     Uncomment the block of code below that adjusts the mass of the boulder, so that when the boulder rolls down the hill, it achieves an apppropriate amount of destruction with the crates.
+ 
+ */
+// What is the current mass of a crate?
+scene.childNode(withName: "one of the crates")?.physicsBody?.mass
+
+// What is the current mass of the boulder?
+boulder.physicsBody?.mass
+
+//// Change the boulder's mass
+//boulder.physicsBody?.mass = 0.05
+
+
+/*:
  
  ### Exercises
  

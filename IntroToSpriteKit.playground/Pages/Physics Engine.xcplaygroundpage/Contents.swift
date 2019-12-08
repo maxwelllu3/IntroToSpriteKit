@@ -3,7 +3,7 @@
  
  Immediately below is code similar to what we explored on a prior page.
  
- Read past this section of code to learn how SpriteKit makes it possible for sprites to interact in a realistic fashion.
+ Read past this section of code to learn how SpriteKit makes it possible for sprites (nodes) to interact in a realistic fashion.
  */
 
 // Required frameworks
@@ -25,7 +25,7 @@ PlaygroundSupport.PlaygroundPage.current.liveView = view
 /*:
  ### Setting the scene
  
- In the code below, a sprite that contains a cliff and a bit of a ramp are positioned at the bottom left corner of the scene.
+ In the code below, a node that contains a cliff and a bit of a ramp are positioned at the bottom left corner of the scene.
  
  A boulder is positioned near the top left corner of the screen.
  
@@ -57,10 +57,54 @@ scene.addChild(hill)
 for i in 1...3 {
     for j in 0...3 - i {
         let crate = SKSpriteNode(imageNamed: "crate")
+        crate.name = "one of the crates"              // assign an identifier to this node
         crate.position = CGPoint(x: 500 - i * 50 - j * 25, y: 25 + j * 50)
         scene.addChild(crate)
     }
 }
+
+/*:
+ ### Configuring Physics Bodies
+ 
+ To allow nodes to interact with one another, we must define *bodies*, or edges, for the nodes.
+ 
+ - Callout(Experiment):
+ Remove the comments for each block of code below, one by one. Run the scene after each comment you remove. What happens?
+
+ Remember that you can select a block of code by positioning your cursor at the left edge of the first line, then hold down the **Shift** key, then press the **↓** key.
+  
+ Once you have selected the block of code, press the **Command** and / keys at the same time to toggle the comments off all at once.
+ 
+ */
+//// Add a physics body for the hill
+//hill.physicsBody = SKPhysicsBody(texture: hill.texture!,
+//                                 alphaThreshold: 0.2,
+//                                 size: hill.size)
+
+//// Add a physics body for the boulder
+//boulder.physicsBody = SKPhysicsBody(texture: boulder.texture!,
+//                                    alphaThreshold: 0.2,
+//                                    size: boulder.size)
+
+//// Add a physics body for all nodes with identifier "one of the crates"
+//for node in scene.children {
+//
+//    // Only look at nodes of type SKSpriteNode
+//    if let thisNode = node as? SKSpriteNode {
+//
+//        // Only the crates
+//        if thisNode.name == "one of the crates" {
+//
+//            // Add a physics body
+//            thisNode.physicsBody = SKPhysicsBody(texture: thisNode.texture!,
+//                                                 alphaThreshold: 0.2,
+//                                                 size: thisNode.size)
+//
+//        }
+//
+//    }
+//
+//}
 
 /*:
  - Callout(Reflect):

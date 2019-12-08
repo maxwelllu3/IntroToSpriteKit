@@ -111,7 +111,7 @@ for i in 1...3 {
  
  A bit more about physics bodies. There are *multiple types* of physics bodies that can be used.
  
- The physics bodies added to the boulder, the hill, and the crates – they are **dynamic** physics bodies. Each body moves, is solid, has mass, can collide with any other type of physics body, and responds to forces – like gravity. Dynamic physics are impacted by the physics engine – unless we tell the body not to be (like with the hill – look closely at the code around line 82).
+ The physics bodies added to the boulder, the hill, and the crates – they are **dynamic** physics bodies. Each body moves, is solid, has mass, can collide with any other type of physics body, and responds to forces – like gravity. Dynamic physics bodies are impacted by the physics engine – unless we tell the body not to be (like with the hill – look closely at the code around line 82).
  
  Do you see what's happening?
  

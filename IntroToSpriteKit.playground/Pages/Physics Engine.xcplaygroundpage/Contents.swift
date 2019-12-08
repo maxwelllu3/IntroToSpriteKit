@@ -31,7 +31,7 @@ PlaygroundSupport.PlaygroundPage.current.liveView = view
  
  Six nodes that will create a pyramid of crates are positioned at the bottom of the hill.
  
- And *yes indeed*, all of these graphics are drawn by Mr. Gordon – the artist who brought you the camelCase camel:
+ And *yes indeed*, all of these graphics are drawn by Mr. Gordon – the "artist" who brought you the camelCase camel:
  
  ![camelCase](camelCase.jpeg)
  
@@ -68,7 +68,7 @@ for i in 1...3 {
  To allow nodes to interact with one another, we must define *bodies*, or edges, for the nodes.
  
  - Callout(Experiment):
- Remove the comments for each block of code below, one by one. Run the scene after each comment you remove. What happens?
+ Remove the comments for each block of code below, one by one. Run the playground after each comment you remove. What happens?
 
  Remember that you can select a block of code by positioning your cursor at the left edge of the first line, then hold down the **Shift** key, then press the **↓** key.
   
@@ -166,27 +166,50 @@ boulder.physicsBody?.mass
 //// Change the boulder's mass
 //boulder.physicsBody?.mass = 0.05
 
+/*:
+ ### Changing the Direction of Gravity
+ 
+ While it doesn't make much sense for this scenario, SpriteKit's physics engine is not limited to gravity always pulling "down" in a scene.
+ 
+ - Experiment:
+    Uncomment the block of code below.
+ 
+    Run the playground.
+ 
+    What happens?
+ 
+    Once you've observed the results, comment the code out again, so that gravity pulls objects down, vertically, in the scene.
+ 
+ */
+// What is the current direction of gravity in the scene?
+scene.physicsWorld.gravity
+
+//// Make gravity pull toward the left side of the scene
+//scene.physicsWorld.gravity = CGVector(dx: -9.8, dy: 0)
 
 /*:
  
  ### Exercises
  
- Write code to complete each of the following tasks.
+ Read through the "Defining a Physics Body’s Physical Properties" section of [the `SKPhysicsBody` class](https://developer.apple.com/documentation/spritekit/skphysicsbody).
  
- 1. lorem ipsum
- 2. lorem ipsum
- 3. lorem ipsum
+ 1. It's not realistic, but try making the boulder extremely bouncy. Once you get this working, comment out the code for your answer before trying exercise 2.
+ 
+ 2. Try making the crates extremely bouncy as well. Refer to the code starting on line 88 for an example of how to adjust the properties of all the crates in an efficient manner. Once you get this working, comment out the code for your answer before trying exercise 3.
+ 
+ 3. Try adjusting the friction of the hill. Run the playground a few times with each new friction value you try. Note the difference in where the boulder ends up. Once you get this working, comment out the code for your answer before trying exercise 4.
+ 
+ 4. Make gravity pull objects upward in the scene.
  
  */
 
 // Exercise 1: Write your code below.
 
-
 // Exercise 2: Write your code below.
-
 
 // Exercise 3: Write your code below.
 
+// Exercise 4: Write your code below.
 
 
 /*:

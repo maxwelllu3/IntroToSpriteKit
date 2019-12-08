@@ -107,6 +107,12 @@ scene.addChild(circle2)
  2. Add a circle to the top right corner of the scene.
  3. Add a square to the scene, centred horizontally, and at the very top of the scene.
  
+ Remember to use autocomplete to your advantage:
+ 
+ ![autocomplete](autocomplete.png)
+ 
+ If autocomplete is not offering suggestions as shown, please quit Xcode, then reopen this project, and carry on.
+ 
  */
 
 // Exercise 1: Write your code below.

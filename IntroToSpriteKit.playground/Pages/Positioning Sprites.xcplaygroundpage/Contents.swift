@@ -60,7 +60,7 @@ circle.position = CGPoint(x: 0, y: 0)
  
  */
 
-//scene.addChild(circle)
+scene.addChild(circle)
 
 /*:
  
@@ -75,10 +75,10 @@ Once you have selected the block of code, press the **Command** and / keys at th
 
  */
 
-//// Add another circle to the right of the origin
-//let circle2 = SKSpriteNode(imageNamed: "circle")
-//circle2.position = CGPoint(x: 100, y: 0)
-//scene.addChild(circle2)
+// Add another circle to the right of the origin
+let circle2 = SKSpriteNode(imageNamed: "circle")
+circle2.position = CGPoint(x: 100, y: 0)
+scene.addChild(circle2)
 
 //// Add another circle further above the origin
 //let circle3 = SKSpriteNode(imageNamed: "circle")

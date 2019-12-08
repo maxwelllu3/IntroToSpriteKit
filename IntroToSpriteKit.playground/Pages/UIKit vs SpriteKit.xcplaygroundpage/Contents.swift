@@ -3,7 +3,7 @@
  
  ## UIKit vs. SpriteKit
  
- UIKit is a *framework* (a collection of functionality) that Apple provides software developers so that they can author iOS apps more easily.
+ UIKit is a *framework* (a collection of functionality) that Apple provides to software developers so that they can author iOS apps more easily.
  
  UIKit offers classes such as UITextField, UIButton, and UILabel, which we've made use of in prior tasks.  UIKit also offers more advanced classes like UITableView – commonly used in iOS apps. Some examples:
  

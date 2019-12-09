@@ -26,8 +26,8 @@ PlaygroundSupport.PlaygroundPage.current.liveView = view
  
  Review the example code provided above.
  
- 1. Make a new SpriteKit animation using some of the ideas presented over the prior six pages.
+ 1. Make a new SpriteKit animation using some of the ideas introduced in this playground.
  
- [Previous: Adding Nodes Repeatedly](@previous) | Page 7
+ [Previous: Working With Text](@previous) | Page 8
  
  */

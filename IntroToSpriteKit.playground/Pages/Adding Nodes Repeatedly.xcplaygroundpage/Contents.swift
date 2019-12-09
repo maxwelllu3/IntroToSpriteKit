@@ -104,6 +104,6 @@ func spawnSand() {
  
  1. Adjust the code that randomly positions the sand particles horizontally, so that the sand particles all fall into the hourglass.
  
- [Previous: Applying Actions to Nodes](@previous) | Page 6 | [Next: Freestyle](@next)
+ [Previous: Applying Actions to Nodes](@previous) | Page 6 | [Next: Working With Text](@next)
  
  */

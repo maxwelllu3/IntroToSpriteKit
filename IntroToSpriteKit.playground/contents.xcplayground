@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='macos' display-mode='rendered'>
+<playground version='6.0' target-platform='macos' display-mode='raw'>
     <pages>
         <page name='UIKit vs SpriteKit'/>
         <page name='Creating a SpriteKit Scene'/>
@@ -7,6 +7,7 @@
         <page name='Physics Engine'/>
         <page name='Applying Actions to Nodes'/>
         <page name='Adding Nodes Repeatedly'/>
+        <page name='Working With Text'/>
         <page name='Freestyle'/>
     </pages>
 </playground>

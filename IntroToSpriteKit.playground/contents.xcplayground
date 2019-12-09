@@ -5,6 +5,7 @@
         <page name='Creating a SpriteKit Scene'/>
         <page name='Positioning Sprites'/>
         <page name='Physics Engine'/>
+        <page name='Applying Actions to Nodes'/>
         <page name='Old tutorial'/>
     </pages>
 </playground>

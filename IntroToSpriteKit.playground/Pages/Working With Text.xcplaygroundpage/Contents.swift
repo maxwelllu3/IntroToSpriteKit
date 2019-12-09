@@ -94,7 +94,7 @@ scene.physicsBody = SKPhysicsBody(edgeLoopFrom: scene.frame)
 
 /*:
 
- [Previous: Adding Nodes Repeatedly](@previous) | Page 7 | [Next: Freestyle](@next)
+ [Previous: Adding Nodes Repeatedly](@previous) | Page 7 | [Next: Particle Effects](@next)
  
  
  */

@@ -1,7 +1,7 @@
 /*:
- ## Freestyle
+ ## Particle Effects
  
- Now, it's your turn. What can you create with your newfound knowledge?
+ Lorem Ipsum
  
  */
 
@@ -22,12 +22,24 @@ view.presentScene(scene)
 PlaygroundSupport.PlaygroundPage.current.liveView = view
 
 /*:
+ ### Adding Some Flash
+ 
+ Lorem ipsum
+ 
+ */
+// Create an instance of the 'SKParticleEmitter' Node
+if let sparks = SKEmitterNode(fileNamed: "Sparks") {
+    sparks.position = CGPoint(x: scene.size.width / 2, y: scene.size.height / 2)
+    scene.addChild(sparks)
+}
+
+/*:
  ### Exercises
  
- Review the example code provided above.
+ Lorem ipsum
  
- 1. Make a new SpriteKit animation using some of the ideas introduced in this playground.
+ 1. Lorem ipsum
  
- [Previous: Particle Effects](@previous) | Page 9
+ [Previous: Working With Text](@previous) | Page 8 | [Next: Freestyle](@next)
  
  */

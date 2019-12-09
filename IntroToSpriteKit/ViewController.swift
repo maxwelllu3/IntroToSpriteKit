@@ -16,22 +16,21 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Create a scene based on the GameScene class
+        // Size is the same as the size set in the storyboard for this view
+        let scene = GameScene(size: skView.frame.size)
+        
+        // Show frames per second in the view
+        self.skView.showsFPS = true
+        
+        // Keep track of how many nodes (visual elements) are on screen
+        // (The fewer nodes the better for performance reasons)
+        self.skView.showsNodeCount = true
+        
+        // Present the scene (which is an instance of the GameScene class)
+        skView.presentScene(scene)
 
-        if let view = self.skView {
-            // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-                
-                // Present the scene
-                view.presentScene(scene)
-            }
-            
-            view.ignoresSiblingOrder = true
-            
-            view.showsFPS = true
-            view.showsNodeCount = true
-        }
     }
 }
 

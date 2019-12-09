@@ -214,7 +214,7 @@ scene.physicsWorld.gravity
 
 /*:
 
- [Previous: Creating a SpriteKit Scene](@previous) | Page 3 | [Next: Physics Engine](@next)
+ [Previous: Creating a SpriteKit Scene](@previous) | Page 4 | [Next: Applying Actions to Nodes](@next)
  
  
  */

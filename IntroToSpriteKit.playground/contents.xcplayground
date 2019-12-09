@@ -6,6 +6,7 @@
         <page name='Positioning Sprites'/>
         <page name='Physics Engine'/>
         <page name='Applying Actions to Nodes'/>
-        <page name='Old tutorial'/>
+        <page name='Adding Nodes Repeatedly'/>
+        <page name='Freestyle'/>
     </pages>
 </playground>

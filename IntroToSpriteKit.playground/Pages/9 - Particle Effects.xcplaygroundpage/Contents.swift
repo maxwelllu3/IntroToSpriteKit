@@ -140,11 +140,34 @@ character.run(throwFireBallRepeatedly)
 /*:
 ### About Particle Effects
  
- TODO: Add section explaining how to add a new particle emitter file.
+ You can add, and configure, new particle files.
  
- TODO: Show how the particle emitter can be modified (in Xcode).
+ To do this, two-finger tap on the **IntroToSpriteKit** folder in this project, then choose **New File**:
  
- TODO: Link to a page explaining what each effect does.
+ ![new-file](new-file.png)
+ 
+ In the sheet that appears, select the **macOS** tab, then **SpriteKit Particle File**:
+ 
+ ![template-file-selection](template-file-selection.png)
+ 
+ Then select whatever template suits your purposes – for now, select *Magic*, then press **Next**.
+ 
+ On the final screen, choose a suitable file name – the default location is fine – then click **Create**:
+ 
+ ![save-file](save-file.png)
+ 
+ You will immediately be taken to a view that shows you the particle emitter with it's default settings.
+ 
+ Show the **Inspectors** panel to adjust settings for the particle emitter:
+ 
+ ![inspector](inspector.png)
+ 
+ Experiment with the settings, but be sure to [also take a look at this document that explains the purpose of the various settings](https://www.hackingwithswift.com/read/11/7/special-effects-skemitternode) (be sure to scroll down a touch on the page to see the descriptions of what each setting does).
+ 
+ Finally – but importantly – to use the particle emitter in a playground page – you'll need to copy it into the *Resources* folder. You can do this by holding down the **Option** key on your keyboard, then dragging up:
+ 
+ ![option-drag](option-drag.png)
+ 
  
 */
 

@@ -1,7 +1,9 @@
 /*:
  ## Freestyle
  
- Now, it's your turn. What can you create with your newfound knowledge?
+ What can you create with your newfound knowledge?
+ 
+ Put something together that's ambitious, or just use this page as a scratchpad to try things out.
  
  */
 
@@ -22,12 +24,7 @@ view.presentScene(scene)
 PlaygroundSupport.PlaygroundPage.current.liveView = view
 
 /*:
- ### Exercises
- 
- Review the example code provided above.
- 
- 1. Make a new SpriteKit animation using some of the ideas introduced in this playground.
- 
- [Previous: Particle Effects](@previous) | Page 9
+
+ [Previous: Particle Effects](@previous) | Page 10 | [Next: Create a Holiday Card!](@next)
  
  */

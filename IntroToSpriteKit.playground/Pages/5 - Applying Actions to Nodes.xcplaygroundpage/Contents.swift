@@ -64,6 +64,10 @@ scene.addChild(circle4)
  These actions can run as:
  
  * "one offs"
+ 
+ or
+ 
+
  * a *sequence* of actions to run one after another
  
  or

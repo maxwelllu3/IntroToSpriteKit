@@ -1,7 +1,13 @@
 /*:
- ## Particle Effects
+ ## Create a Holiday Card!
  
- Lorem Ipsum
+ Here's an example of a seasonal animation that I created using SpriteKit:
+ 
+ TODO - ADD EMBEDDED VIDEO
+ 
+ Now it's your turn – go ahead and create something of your own design!
+ 
+ Aim to include as many SpriteKit concepts as possible that you've learned about by completing this playground.
  
  */
 
@@ -22,24 +28,8 @@ view.presentScene(scene)
 PlaygroundSupport.PlaygroundPage.current.liveView = view
 
 /*:
- ### Adding Some Flash
- 
- Lorem ipsum
- 
- */
-// Create an instance of the 'SKParticleEmitter' Node
-if let sparks = SKEmitterNode(fileNamed: "Sparks") {
-    sparks.position = CGPoint(x: scene.size.width / 2, y: scene.size.height / 2)
-    scene.addChild(sparks)
-}
 
-/*:
- ### Exercises
- 
- Lorem ipsum
- 
- 1. Lorem ipsum
- 
- [Previous: Working With Text](@previous) | Page 8 | [Next: Freestyle](@next)
+ [Previous: Freestyle](@previous) | Page 11
  
  */
+

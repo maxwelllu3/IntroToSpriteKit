@@ -214,7 +214,7 @@ scene.physicsWorld.gravity
 
 /*:
 
- [Previous: Creating a SpriteKit Scene](@previous) | Page 4 | [Next: Applying Actions to Nodes](@next)
+ [Previous: Positioning Sprites](@previous) | Page 4 | [Next: Applying Actions to Nodes](@next)
  
  
  */

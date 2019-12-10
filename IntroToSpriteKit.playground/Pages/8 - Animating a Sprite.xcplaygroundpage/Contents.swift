@@ -129,7 +129,20 @@ An [array](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#
 /*:
  ### Exercises
  
- 1. TODO: Find images that the student can use to make a bird fly (flap it's wings) as it moves across the screen in the opposite direction.
+ Animate a rocket blasting off into space.
+ 
+ If you open the **Resources** subfolder, you'll find a series of images to work with:
+ 
+ ![rocket](rocket-images.png)
+ 
+ These rocket images [are used with permission](http://newsletters.livecode.com/october/issue120/newsletter2.php?a=NWS120) and the [complete list of video and audio assets can be found here](http://www.runrev.com/downloads/galactic-gauntlet.zip).
+ 
+ Make the following happen in order.
+ 
+ 1. Add a sprite based on the `rocket.png` file. Position the sprite on the right side of the scene, near the ground.
+ 2. Create an `[SKTexture]` array using the images named `rocket_0.png` to `rocket_5.png` from the **Resources** folder.
+ 3. Create an animation that will make the fireball below the rocket grow in size for second or two while the rocket remains stationary.
+ 4. Then, make the rocket "blast off" and move up on the screen. The image should show fire under the rocket (use `restore: false` when you create the animation in step 3).
  
  [Previous: Working With Text](@previous) | Page 8 | [Next: Particle Effects](@next)
  

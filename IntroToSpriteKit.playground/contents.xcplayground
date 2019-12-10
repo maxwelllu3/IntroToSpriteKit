@@ -1,16 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='macos' display-mode='rendered'>
-    <pages>
-        <page name='1 - UIKit vs SpriteKit'/>
-        <page name='2 - Creating a SpriteKit Scene'/>
-        <page name='3 - Positioning Sprites'/>
-        <page name='4 - Physics Engine'/>
-        <page name='5 - Applying Actions to Nodes'/>
-        <page name='6 - Adding Nodes Repeatedly'/>
-        <page name='7 - Working With Text'/>
-        <page name='8 - Animating a Sprite'/>
-        <page name='9 - Particle Effects'/>
-        <page name='10 - Freestyle'/>
-        <page name='11 - Create a Holiday Card!'/>
-    </pages>
-</playground>
+<playground version='6.0' target-platform='macos' display-mode='rendered'/>

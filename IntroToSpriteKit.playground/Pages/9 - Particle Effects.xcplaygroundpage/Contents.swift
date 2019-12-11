@@ -1,7 +1,7 @@
 /*:
  ## Particle Effects
  
- The scene below sets up a basic scene with a black background.
+ The code below sets up a basic scene with a black background.
 
  A character from a classic video game is positioned in the lower left corner.
  

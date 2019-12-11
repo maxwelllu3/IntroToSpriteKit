@@ -169,16 +169,26 @@ PlaygroundSupport.PlaygroundPage.current.liveView = view
  
  ![option-drag](option-drag.png)
  
-*/
+ ### Exercises
+ 
+ Particle emitters can be used for a variety of purposes.
+ 
+ 1. Create a particle emitter that makes it look like a major snowstorm is occurring. Add it to this scene.
+ 
+ */
+
+// Exercise 1: Write your code below.
+
+// Here is some starter code (assuming that your new particle emitter file is named "Snow.sks"
+if let snowstorm = SKEmitterNode(fileNamed: "Snow") {
+
+    // Position the node and add to scene – write the code to make this happen
+    
+}
+
 
 
 /*:
- ### Exercises
- 
- TODO: Ask the student to create a new particle emitter. Then get them to create the appearance of snow in this scene (after commenting out the attack code further up.
- 
- 1. Lorem ipsum
- 2. Lorem ipsum
 
  
  [Previous: Animating a Sprite](@previous) | Page 9 | [Next: Freestyle](@next)

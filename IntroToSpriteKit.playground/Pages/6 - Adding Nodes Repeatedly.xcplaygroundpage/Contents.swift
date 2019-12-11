@@ -58,7 +58,7 @@ func spawnSand() {
     let y = scene.size.height - sand.size.height
 
     // Horizontal position is random
-    let x = CGFloat(Double.random(in: 0.0...Double(scene.size.width)))
+    let x = CGFloat.random(in: 0.0...scene.size.width)
 
     // Set the grain of sand's position
     sand.position = CGPoint(x: x, y: y)

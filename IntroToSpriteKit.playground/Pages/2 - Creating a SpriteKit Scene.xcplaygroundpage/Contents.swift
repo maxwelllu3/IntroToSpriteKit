@@ -9,7 +9,7 @@
  
  ### Required Frameworks
  
- First we must important some required frameworks.
+ First we must import some required frameworks.
  */
 import PlaygroundSupport    // Allows playground to show live view
 import SpriteKit            // Provides 2D graphics classes
@@ -25,7 +25,7 @@ var scene = SKScene(size: frame.size)
 
 /*:
  ### Present the scene
- In projects built upon the UIKit framework, you have used Interface Builder to add views to a storyboard.
+ In projects built upon the UIKit framework, you have previously used Interface Builder to add views to a storyboard.
  
  Here, we create a view using code instead, and then show that view in the playground's live view area.
  */

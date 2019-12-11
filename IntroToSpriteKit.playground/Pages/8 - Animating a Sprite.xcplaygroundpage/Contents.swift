@@ -1,9 +1,9 @@
 /*:
  ## Animating a Sprite
  
- The code below sets up a basic scene with a black background.
+ The code below sets up a basic scene with a black background, and a hero from a classic video game at bottom left.
  
- Read past this code section to learn how to animate a sprite to create the appearance of realistic movement.
+ Read past this code section to learn how to animate a sprite to create the appearance of more realistic movement.
  
  */
 
@@ -78,7 +78,7 @@ An [array](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#
  ![walking-images-array](walking_images_array.png)
  
  - Experiment:
- Uncomment the block of code below. This creates the array of images we need. Click the *Show Result* button at right, beside line 91. What do you see?
+ Uncomment the block of code below, then run the playground. This creates the array of images we need. Click the *Show Result* button at right, beside line 91. What do you see?
  
  ![show-result](show-result.png)
  
@@ -103,7 +103,7 @@ An [array](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#
  That is exactly what we are now going to ask SpriteKit to do for us.
 
  - Experiment:
- Uncomment each block of code below. Run the playgrounds. What happens?
+ Uncomment each block of code below. Run the playground. What happens?
  
  */
 
@@ -127,7 +127,7 @@ An [array](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#
 //hero.run(actionWalkAndMoveFiveTimes)
 
 /*:
- ### Exercises
+ ### Exercise
  
  Animate a rocket blasting off into space.
  
@@ -137,12 +137,18 @@ An [array](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#
  
  These rocket images [are used with permission](http://newsletters.livecode.com/october/issue120/newsletter2.php?a=NWS120) and the [complete list of video and audio assets can be found here](http://www.runrev.com/downloads/galactic-gauntlet.zip).
  
- Make the following happen in order.
+ Make the following happen in order:
  
- 1. Add a sprite based on the `rocket.png` file. Position the sprite on the right side of the scene, near the ground.
- 2. Create an `[SKTexture]` array using the images named `rocket_0.png` to `rocket_5.png` from the **Resources** folder.
- 3. Create an animation that will make the fireball below the rocket grow in size for second or two while the rocket remains stationary.
- 4. Then, make the rocket "blast off" and move up on the screen. The image should show fire under the rocket (use `restore: false` when you create the animation in step 3).
+ * Add a sprite based on the `rocket.png` file. Position the sprite on the right side of the scene, near the ground.
+ * Create an `[SKTexture]` array using the images named `rocket_0.png` to `rocket_5.png` from the **Resources** folder.
+ * Create an animation that will make the fireball below the rocket grow in size for second or two while the rocket remains stationary.
+ * Then, make the rocket "blast off" and move up on the screen. The image should show fire under the rocket as the rocket moves (use `restore: false` when you create the animation in step 3).
+ 
+ */
+
+// Exercise: Write your code below
+
+/*:
  
  [Previous: Working With Text](@previous) | Page 8 | [Next: Particle Effects](@next)
  

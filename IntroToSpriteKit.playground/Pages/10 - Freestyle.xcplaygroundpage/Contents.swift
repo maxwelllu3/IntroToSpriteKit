@@ -47,10 +47,6 @@ PlaygroundSupport.PlaygroundPage.current.liveView = view
  
  After those programs are installed, you can [use a sprite sheet like this one](http://spritedatabase.net/files/snes/541/Sprite/MarioLuigi.gif), and [feed it into Shoebox like this](http://renderhjs.net/shoebox/extractSprites.htm) to extract the individual images.
  
- */
-
-/*:
-
  [Previous: Particle Effects](@previous) | Page 10 | [Next: Create a Holiday Card!](@next)
  
  */

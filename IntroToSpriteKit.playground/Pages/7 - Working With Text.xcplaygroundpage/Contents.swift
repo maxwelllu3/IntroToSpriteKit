@@ -45,6 +45,11 @@ scene.physicsBody = SKPhysicsBody(edgeLoopFrom: scene.frame)
  
  - Experiment:
      Uncomment the blocks of code below, one block at a time. Run the playground after uncommenting each block.
+ 
+ - Note:
+ You may wish to set the Live View area to present at the bottom of the Xcode window, since this playground creates a fairly wide SpriteKit scene:
+ 
+ ![live-view-at-bottom](live-view-at-bottom.png)
   
  Remember that you can select a block of code by positioning your cursor at the left edge of the first line, then hold down the **Shift** key, then press the **↓** key.
   

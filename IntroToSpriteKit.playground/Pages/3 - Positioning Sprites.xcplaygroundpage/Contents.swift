@@ -1,7 +1,7 @@
 /*:
  ## Positioning Sprites
  
- Immediately below is the code we first explored on the prior page.
+ Immediately below is the code you explored on the prior page.
  
  Read past this section of code to learn how to create and position sprites.
  */

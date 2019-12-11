@@ -195,7 +195,7 @@ scene.physicsWorld.gravity
  
  1. It's not realistic, but try making the boulder extremely bouncy. Once you get this working, comment out the code for your answer before trying exercise 2.
  
- 2. Try making the crates extremely bouncy as well. Refer to the code starting on line 88 for an example of how to adjust the properties of all the crates in an efficient manner. Once you get this working, comment out the code for your answer before trying exercise 3.
+ 2. Try making the crates extremely bouncy as well. Refer to the block of code starting on line 88 for an example of how to adjust the properties of all the crates in an efficient manner. Once you get this working, comment out the code for your answer before trying exercise 3.
  
  3. Try adjusting the friction of the hill. Run the playground a few times with each new friction value you try. Note the difference in where the boulder ends up. Once you get this working, comment out the code for your answer before trying exercise 4.
  

@@ -28,7 +28,8 @@ scene.physicsBody = SKPhysicsBody(edgeLoopFrom: scene.frame)
 // Add the character to bottom left corner
 let character = SKSpriteNode(imageNamed: "sf")
 // Increase the character's size as the original image is very small
-character.run(SKAction.scale(by: 1.5, duration: 0))
+let actionScaleUp = SKAction.scale(by: 1.5, duration: 0)
+character.run(actionScaleUp)
 // Position at bottom left
 character.position = CGPoint(x: 50, y: character.size.height * 1.5 / 2)
 // Create physics body
@@ -48,26 +49,26 @@ PlaygroundSupport.PlaygroundPage.current.liveView = view
     You should see the character repeatedly making a motion.
  
  */
-// Create [SKTexture] array
-var throwFireBallTextures: [SKTexture] = []     // Empty array
-throwFireBallTextures.append(SKTexture(imageNamed: "sf_fireball_0"))
-throwFireBallTextures.append(SKTexture(imageNamed: "sf_fireball_1"))
-throwFireBallTextures.append(SKTexture(imageNamed: "sf_fireball_2"))
-
-// Create an action to animate throwing a fireball
-let throwFireballAnimation = SKAction.animate(with: throwFireBallTextures, timePerFrame: 0.2, resize: true, restore: true)
-
-// Wait a bit
-let actionWaitASecond = SKAction.wait(forDuration: 1)
-
-// Make a sequence – throw fireball, then wait
-var actionThrowFireBallThenWait = SKAction.sequence([throwFireballAnimation, actionWaitASecond])
-
-// Repeat the sequence
-var throwFireBallRepeatedly = SKAction.repeatForever(actionThrowFireBallThenWait)
-
-// Cause the character to throw the fireball
-character.run(throwFireBallRepeatedly)
+//// Create [SKTexture] array
+//var throwFireBallTextures: [SKTexture] = []     // Empty array
+//throwFireBallTextures.append(SKTexture(imageNamed: "sf_fireball_0"))
+//throwFireBallTextures.append(SKTexture(imageNamed: "sf_fireball_1"))
+//throwFireBallTextures.append(SKTexture(imageNamed: "sf_fireball_2"))
+//
+//// Create an action to animate throwing a fireball
+//let throwFireballAnimation = SKAction.animate(with: throwFireBallTextures, timePerFrame: 0.2, resize: true, restore: true)
+//
+//// Wait a bit
+//let actionWaitASecond = SKAction.wait(forDuration: 1)
+//
+//// Make a sequence – throw fireball, then wait
+//var actionThrowFireBallThenWait = SKAction.sequence([throwFireballAnimation, actionWaitASecond])
+//
+//// Repeat the sequence
+//var throwFireBallRepeatedly = SKAction.repeatForever(actionThrowFireBallThenWait)
+//
+//// Cause the character to throw the fireball
+//character.run(throwFireBallRepeatedly)
 
 /*:
  Doesn't it look like the character should be throwing a fireball? Let's make that happen.
@@ -142,7 +143,7 @@ character.run(throwFireBallRepeatedly)
  
  You can add, and configure, new particle files.
  
- To do this, two-finger tap on the **IntroToSpriteKit** folder in this project, then choose **New File**:
+ To do this, two-finger tap on the **IntroToSpriteKit** folder in this project, then choose **New File...**:
  
  ![new-file](new-file.png)
  
@@ -167,7 +168,6 @@ character.run(throwFireBallRepeatedly)
  Finally – but importantly – to use the particle emitter in a playground page – you'll need to copy it into the *Resources* folder. You can do this by holding down the **Option** key on your keyboard, then dragging up:
  
  ![option-drag](option-drag.png)
- 
  
 */
 

@@ -3,7 +3,7 @@
  
  The scene below sets up a basic scene with a black background.
 
- A character from an old video game is positioned in the lower left corner.
+ A character from a classic video game is positioned in the lower left corner.
  
  Read past this code to learn how particle effects can be used to add some "sizzle" to your SpriteKit animations.
  

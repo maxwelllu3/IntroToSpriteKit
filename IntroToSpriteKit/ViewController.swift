@@ -17,6 +17,9 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Change size of view
+        self.skView.frame = NSRect(x: 0, y: 0, width: 1200, height: 900)
+        
         // Create a scene based on the GameScene class
         // Size is the same as the size set in the storyboard for this view
         let scene = GameScene(size: skView.frame.size)

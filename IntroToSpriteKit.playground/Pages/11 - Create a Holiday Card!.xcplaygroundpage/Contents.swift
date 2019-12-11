@@ -28,13 +28,15 @@ PlaygroundSupport.PlaygroundPage.current.liveView = view
 
 #### Sprites
 
-The [Sprite Database](http://spritedatabase.net/) has spritesheets for a wide variety of classic video games.
-
-Of course, you can also draw sprites yourself (using an iPad, or by hand-drawing images and scanning or photographing them).
-
 Note that [using copyrighted assets is permissable for personal use in Canada](https://en.wikipedia.org/wiki/Fair_dealing_in_Canadian_copyright_law), but if you wish to publish your work in any fashion – you need to find image assets with [compatible licensing terms](https://search.creativecommons.org).
 
-[Open Game Art](https://opengameart.org) is another good option for graphics assets for your games or animations.
+[Open Game Art](https://opengameart.org) is a good option for graphics assets for your games or animations.
+ 
+For winter themed graphics assets, here are some starting points:
+ 
+* [Winter Platformer](https://opengameart.org/content/winter-platformer-game-tileset) at Open Game Art
+* [Winter Tileset](https://opengameart.org/content/winter-tilesets) at Open Game Art
+* [Winter Wonderland](https://opengameart.org/content/winter-wonderland-pack) at Open Game Art
 
 #### Decompiling Sprite Sheets
 
@@ -46,6 +48,25 @@ Programs exist that do this automatically for you.
 2. Download and [install Shoebox](http://renderhjs.net/shoebox/).
 
 After those programs are installed, you can [use a sprite sheet like this one](http://spritedatabase.net/files/snes/541/Sprite/MarioLuigi.gif), and [feed it into Shoebox like this](http://renderhjs.net/shoebox/extractSprites.htm) to extract the individual images.
+ 
+ #### Sound Assets
+ 
+ [The Sounds Resource](https://www.sounds-resource.com) has sound effects. Use the search box to find what you need.
+ 
+ #### Some Advice About Art and Music Assets
+ 
+ It's easy to go down a big rabbit hole – that is, spend a lot of time – looking for the "perfect" sound or music asset.
+ 
+ Try to avoid this. I suggest sticking with the links given above, or creating your own art and music assets, if that is an area you are skilled in.
+ 
+ Know that there are many, many free art and music assets out there.
+ 
+ Visual and audio artists do important work and deserve to be compensated fairly for that work – but you should not look to pay for art or music assets to complete a quick assignment for this class.
+
+ It would be a different converstaion – paying a reasonable sum for royalty free music or art assets – if you were looking to complete a larger project – especially if you were aiming to publish your work on the App Store.
+ 
+ You will never be assessed in this course for the quality of the music or art assets used in your work.
+
 
  [Previous: Freestyle](@previous) | Page 11
  

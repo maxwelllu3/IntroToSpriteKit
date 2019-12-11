@@ -47,6 +47,26 @@ PlaygroundSupport.PlaygroundPage.current.liveView = view
  
  After those programs are installed, you can [use a sprite sheet like this one](http://spritedatabase.net/files/snes/541/Sprite/MarioLuigi.gif), and [feed it into Shoebox like this](http://renderhjs.net/shoebox/extractSprites.htm) to extract the individual images.
  
+ #### Sound Assets
+ 
+ [RetroTracks](https://retro.sx) is a great resource for full-length background music from classic video games.
+ 
+ [The Sounds Resource](https://www.sounds-resource.com) has sound effects (like for a ray gun blast, jump sound effect, et cetera). Use the search box to find what you need.
+ 
+ #### Some Advice About Art and Music Assets
+ 
+ It's easy to go down a big rabbit hole – that is, spend a lot of time – looking for the "perfect" sound or music asset.
+ 
+ Try to avoid this. I suggest sticking with the links given above, or creating your own art and music assets, if that is an area you are skilled in.
+ 
+ Know that there are many, many free art and music assets out there.
+ 
+ Visual and audio artists do important work and deserve to be compensated fairly for that work – but you should not look to pay for art or music assets to complete a quick assignment for this class.
+
+ It would be a different converstaion – paying a reasonable sum for royalty free music or art assets – if you were looking to complete a larger project – especially if you were aiming to publish your work on the App Store.
+ 
+ You will never be assessed in this course for the quality of the music or art assets used in your work.
+ 
  [Previous: Particle Effects](@previous) | Page 10 | [Next: Create a Holiday Card!](@next)
  
  */

@@ -53,6 +53,14 @@ PlaygroundSupport.PlaygroundPage.current.liveView = view
  
  [The Sounds Resource](https://www.sounds-resource.com) has sound effects (like for a ray gun blast, jump sound effect, et cetera). Use the search box to find what you need.
  
+ To play short sound effects, consult [the `SKAction` developer documentation](https://developer.apple.com/documentation/spritekit/skaction/1417664-playsoundfilenamed).
+ 
+ In a playground, a clip of up to 30 seconds should will work well via the `SKAction` class.
+ 
+ Outside of a playground – a "real" app made with SpriteKit to run on macOS, iOS, or tvOS – longer form audio should be played using AVAudioPlayer. You will not need to worry about this for the time being.
+ 
+ [Audacity](https://www.fosshub.com/Audacity.html) is a reasonably capable open source app that is helpful for editing sound file clips, if needed.
+ 
  #### Some Advice About Art and Music Assets
  
  It's easy to go down a big rabbit hole – that is, spend a lot of time – looking for the "perfect" sound or music asset.

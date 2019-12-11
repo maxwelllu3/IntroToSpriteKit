@@ -84,7 +84,7 @@ scene.physicsBody = SKPhysicsBody(edgeLoopFrom: scene.frame)
  
  The capital letter T is created, given a circular physics body, and so it falls and interacts with the hill.
  
- ### Exercises
+ ### Exercise
  
  1. Create several individual text nodes, with [rectangular physics bodies](https://developer.apple.com/documentation/spritekit/skphysicsbody/1520295-init). Line up the letters at the bottom of the hill so they look something like what is pictured below (the word and font you choose may vary). Create an animation where the letter T rolls down the hill and bumps all the other letters away.
  
@@ -94,7 +94,7 @@ scene.physicsBody = SKPhysicsBody(edgeLoopFrom: scene.frame)
  
  */
 
-// Exercise 1: Write your code below.
+// Exercise: Write your code below.
 
 
 /*:

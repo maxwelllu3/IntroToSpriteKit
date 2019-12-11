@@ -52,13 +52,7 @@ After those programs are installed, you can [use a sprite sheet like this one](h
  #### Sound Assets
  
  [The Sounds Resource](https://www.sounds-resource.com) has sound effects. Use the search box to find what you need.
- 
- To play short sound effects, consult [the `SKAction` developer documentation](https://developer.apple.com/documentation/spritekit/skaction/1417664-playsoundfilenamed).
- 
- In a playground, a clip of up to 30 seconds should will work well via the `SKAction` class.
- 
- Outside of a playground – a "real" app made with SpriteKit to run on macOS, iOS, or tvOS – longer form audio should be played using AVAudioPlayer. You will not need to worry about this for the time being.
- 
+  
  [Audacity](https://www.fosshub.com/Audacity.html) is a reasonably capable open source app that is helpful for editing sound file clips, if needed.
  
  #### Some Advice About Art and Music Assets
@@ -73,10 +67,7 @@ After those programs are installed, you can [use a sprite sheet like this one](h
 
  It would be a different converstaion – paying a reasonable sum for royalty free music or art assets – if you were looking to complete a larger project – especially if you were aiming to publish your work on the App Store.
  
- You will never be assessed in this course for the quality of the music or art assets used in your work.
-
-
- [Previous: Freestyle](@previous) | Page 11
+ [Previous: Freestyle](@previous) | Page 12
  
  */
 

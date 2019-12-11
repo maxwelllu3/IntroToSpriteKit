@@ -23,9 +23,11 @@ class GameScene: SKScene {
         
         // Get a reference to the mp3 file in the app bundle
         let backgroundMusicFilePath = Bundle.main.path(forResource: "sleigh-bells-excerpt.mp3", ofType: nil)!
+        
+        // Convert the file path string to a URL (Uniform Resource Locator)
         let backgroundMusicFileURL = URL(fileURLWithPath: backgroundMusicFilePath)
         
-        // Attempt to open and play the file at the path
+        // Attempt to open and play the file at the given URL
         do {
             backgroundMusic = try AVAudioPlayer(contentsOf: backgroundMusicFileURL)
             backgroundMusic?.play()

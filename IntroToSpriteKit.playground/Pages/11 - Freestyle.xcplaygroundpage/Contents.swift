@@ -10,6 +10,7 @@
 // Required frameworks
 import PlaygroundSupport    // Allows playground to show live view
 import SpriteKit            // Provides 2D graphics classes
+import AVFoundation         // Provides classes to play audio files
 
 // Define the animation size, scene, and scene color
 let frame = CGRect(x: 0, y: 0, width: 400, height: 300)
@@ -49,18 +50,12 @@ PlaygroundSupport.PlaygroundPage.current.liveView = view
  
  #### Sound Assets
  
- [RetroTracks](https://retro.sx) is a great resource for full-length background music from classic video games.
- 
  [The Sounds Resource](https://www.sounds-resource.com) has sound effects (like for a ray gun blast, jump sound effect, et cetera). Use the search box to find what you need.
- 
- To play short sound effects, consult [the `SKAction` developer documentation](https://developer.apple.com/documentation/spritekit/skaction/1417664-playsoundfilenamed).
- 
- In a playground, a clip of up to 30 seconds should will work well via the `SKAction` class.
- 
- Outside of a playground – a "real" app made with SpriteKit to run on macOS, iOS, or tvOS – longer form audio should be played using AVAudioPlayer. You will not need to worry about this for the time being.
- 
+
+ [RetroTracks](https://retro.sx) is a great resource for full-length background music from classic video games.
+
  [Audacity](https://www.fosshub.com/Audacity.html) is a reasonably capable open source app that is helpful for editing sound file clips, if needed.
- 
+
  #### Some Advice About Art and Music Assets
  
  It's easy to go down a big rabbit hole – that is, spend a lot of time – looking for the "perfect" sound or music asset.
@@ -73,8 +68,6 @@ PlaygroundSupport.PlaygroundPage.current.liveView = view
 
  It would be a different converstaion – paying a reasonable sum for royalty free music or art assets – if you were looking to complete a larger project – especially if you were aiming to publish your work on the App Store.
  
- You will never be assessed in this course for the quality of the music or art assets used in your work.
- 
- [Previous: Particle Effects](@previous) | Page 10 | [Next: Create a Holiday Card!](@next)
+ [Previous: Music and Sound Effects](@previous) | Page 11 | [Next: Create a Holiday Card!](@next)
  
  */

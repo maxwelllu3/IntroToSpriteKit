@@ -31,11 +31,11 @@ class ViewController: NSViewController {
         scene.scaleMode = .aspectFill
         
         // Show frames per second in the view
-        self.skView.showsFPS = true
+        //self.skView.showsFPS = true
         
         // Keep track of how many nodes (visual elements) are on screen
         // (The fewer nodes the better for performance reasons)
-        self.skView.showsNodeCount = true
+        //self.skView.showsNodeCount = true
         
         // Show physics
         self.skView.showsPhysics = false

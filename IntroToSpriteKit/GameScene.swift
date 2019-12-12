@@ -55,6 +55,11 @@ class GameScene: SKScene {
         let actionOneSecondWait = SKAction.wait(forDuration: 1)
         let actionSixSecondWait = SKAction.wait(forDuration: 6)
         
+        // Set sequence to wait then remove all nodes and show end credits
+        let actionShowEndCredits = SKAction.run(removeEverythingThenShowEndCredits)
+        let actionWaitThenShowEndCredits = SKAction.sequence([actionSixSecondWait, actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionShowEndCredits])
+        self.run(actionWaitThenShowEndCredits)
+        
         // Add the yeti behind the tree
         let yeti = SKSpriteNode(imageNamed: "yeti")
         yeti.position = CGPoint(x: tree.position.x - 31, y: tree.position.y - yeti.size.height / 4)
@@ -213,56 +218,56 @@ class GameScene: SKScene {
         // Immediately add the "H"
         self.run(actionAddH)
         
-        // Wait a second then add the "a"
-        let actionWaitThenAddA = SKAction.sequence([actionOneSecondWait, actionAddA])
+        // Wait half a second then add the "a"
+        let actionWaitThenAddA = SKAction.sequence([actionShortWait, actionAddA])
         self.run(actionWaitThenAddA)
 
-        // Wait two seconds then add the "p"
-        let actionWaitThenAddP = SKAction.sequence([actionOneSecondWait, actionOneSecondWait, actionAddP])
+        // Wait one second then add the "p"
+        let actionWaitThenAddP = SKAction.sequence([actionShortWait, actionShortWait, actionAddP])
         self.run(actionWaitThenAddP)
 
-        // Wait three seconds then add the second "p"
-        let actionWaitThenAddP2 = SKAction.sequence([actionOneSecondWait, actionOneSecondWait,  actionOneSecondWait, actionAddP2])
+        // Wait one and a half seconds then add the second "p"
+        let actionWaitThenAddP2 = SKAction.sequence([actionShortWait, actionShortWait, actionShortWait, actionAddP2])
         self.run(actionWaitThenAddP2)
 
-        // Wait four seconds then add the "y", then wait two more seconds, then make "Happy" letters not be affected by gravity, then make gravity pull to the right
-        let actionWaitThenAddY = SKAction.sequence([actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionAddY, actionOneSecondWait, actionOneSecondWait, actionHappyNotAffectedByGravity, actionGravityPullToRight])
+        // Wait two seconds then add the "y", then wait one seconds, then make "Happy" letters not be affected by gravity, then make gravity pull to the right
+        let actionWaitThenAddY = SKAction.sequence([actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionAddY, actionShortWait, actionShortWait, actionShortWait, actionHappyNotAffectedByGravity, actionGravityPullToRight])
         self.run(actionWaitThenAddY)
         
-        // Wait six seconds then start adding the letters from "Holidays!" at 0.5 second intervals
-        let actionWaitThenAddBangFromLeft = SKAction.sequence([actionSixSecondWait, actionAddBangFromLeft])
+        // Wait three 3.5 seconds then start adding the letters from "Holidays!" at 0.5 second intervals
+        let actionWaitThenAddBangFromLeft = SKAction.sequence([actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionShortWait, actionAddBangFromLeft])
         self.run(actionWaitThenAddBangFromLeft)
         
         // Add the s
-        let actionWaitThenAddSFromLeft = SKAction.sequence([actionSixSecondWait, actionShortWait, actionAddSFromLeft])
+        let actionWaitThenAddSFromLeft = SKAction.sequence([actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionShortWait, actionShortWait, actionAddSFromLeft])
         self.run(actionWaitThenAddSFromLeft)
 
         // Add the y
-        let actionWaitThenAddYFromLeft = SKAction.sequence([actionSixSecondWait, actionShortWait, actionShortWait, actionAddYFromLeft])
+        let actionWaitThenAddYFromLeft = SKAction.sequence([actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionShortWait, actionShortWait, actionShortWait, actionAddYFromLeft])
         self.run(actionWaitThenAddYFromLeft)
 
         // Add the a
-        let actionWaitThenAddAFromLeft = SKAction.sequence([actionSixSecondWait, actionShortWait, actionShortWait, actionShortWait, actionAddAFromLeft])
+        let actionWaitThenAddAFromLeft = SKAction.sequence([actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionAddAFromLeft])
         self.run(actionWaitThenAddAFromLeft)
 
         // Add the d
-        let actionWaitThenAddDFromLeft = SKAction.sequence([actionSixSecondWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionAddDFromLeft])
+        let actionWaitThenAddDFromLeft = SKAction.sequence([actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionAddDFromLeft])
         self.run(actionWaitThenAddDFromLeft)
 
         // Add the i
-        let actionWaitThenAddIFromLeft = SKAction.sequence([actionSixSecondWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionAddIFromLeft])
+        let actionWaitThenAddIFromLeft = SKAction.sequence([actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionAddIFromLeft])
         self.run(actionWaitThenAddIFromLeft)
 
         // Add the l
-        let actionWaitThenAddLFromLeft = SKAction.sequence([actionSixSecondWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionAddLFromLeft])
+        let actionWaitThenAddLFromLeft = SKAction.sequence([actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionAddLFromLeft])
         self.run(actionWaitThenAddLFromLeft)
 
         // Add the o
-        let actionWaitThenAddOFromLeft = SKAction.sequence([actionSixSecondWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionAddOFromLeft])
+        let actionWaitThenAddOFromLeft = SKAction.sequence([actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionAddOFromLeft])
         self.run(actionWaitThenAddOFromLeft)
 
         // Add the H
-        let actionWaitThenAddHFromLeft = SKAction.sequence([actionSixSecondWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionAddHFromLeft])
+        let actionWaitThenAddHFromLeft = SKAction.sequence([actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionAddHFromLeft])
         self.run(actionWaitThenAddHFromLeft)
 
 
@@ -282,7 +287,7 @@ class GameScene: SKScene {
         self.addChild(reminder)
         
         // Fade the warning in
-        let actionFadeIn = SKAction.fadeIn(withDuration: 2.0)
+        let actionFadeIn = SKAction.fadeIn(withDuration: 1.0)
         reminder.run(actionFadeIn)
 
     }
@@ -318,7 +323,37 @@ class GameScene: SKScene {
         self.addChild(newLetter)
 
     }
-
+    
+    // Remove everything and show end credits
+    func removeEverythingThenShowEndCredits() {
+        
+        // Remove all existing children nodes
+        self.removeAllChildren()
+        
+        // Change background to black
+        self.backgroundColor = .black
+        
+        // Add end credits
+        
+        // By...
+        let by = SKLabelNode(fontNamed: "Helvetica Neue")
+        by.fontSize = 48
+        by.fontColor = .white
+        by.text = "Brought to you by Mr. Gordon"
+        by.zPosition = 3
+        by.position = CGPoint(x: self.size.width / 2, y: self.size.height / 2 + 50)
+        self.addChild(by)
+        
+        // And...
+        let and = SKLabelNode(fontNamed: "Helvetica Neue")
+        and.fontSize = 36
+        and.fontColor = .white
+        and.text = "and the Grade 12 Computer Science class"
+        and.zPosition = 3
+        and.position = CGPoint(x: self.size.width / 2, y: self.size.height / 2 - 50)
+        self.addChild(and)
+        
+    }
     
     // Make gravity cause items to fall from the left (gravity pulls to right side of screen)
     func gravityPullToRight() {

@@ -35,18 +35,27 @@ class GameScene: SKScene {
 //            // Do nothing if the sound file could not be played
 //        }
         
+        
         // Blue background
         self.backgroundColor = NSColor(calibratedHue: 240/360, saturation: 80/100, brightness: 20/100, alpha: 1)
         
         // Place a tree in the foreground at right
         let tree = SKSpriteNode(imageNamed: "Tree_2")
         tree.position = CGPoint(x: self.size.width - 50, y: tree.size.height - 16)
+        tree.zPosition = 5
         self.addChild(tree)
+        
+        // Add a middle background to create perspective effect
+        let middleBackground = SKSpriteNode(imageNamed: "perspective")
+        middleBackground.position = CGPoint(x: middleBackground.size.width / 2, y: 178)
+        middleBackground.zPosition = 0
+        self.addChild(middleBackground)
         
         // Create the ground
         for x in 0...6 {
             let groundTile = SKSpriteNode(imageNamed: "middle-ground")
             groundTile.position = CGPoint(x: groundTile.size.width / 2 + CGFloat(x) * groundTile.size.width , y: groundTile.size.height / 2)
+            groundTile.zPosition = 2 // Ahead of the white rectangle
             self.addChild(groundTile)
         }
 

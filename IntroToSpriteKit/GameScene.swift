@@ -57,30 +57,55 @@ class GameScene: SKScene {
         self.addChild(reindeer)
         
         // Create an empty array of SKTexture objects
-        var reindeerRunningTextures: [SKTexture] = []
+        var reindeerRunningRightTextures: [SKTexture] = []
         
-        // Now add the two images we need in the array
-        reindeerRunningTextures.append(SKTexture(imageNamed: "deer_01"))
-        reindeerRunningTextures.append(SKTexture(imageNamed: "deer_02"))
-        reindeerRunningTextures.append(SKTexture(imageNamed: "deer_03"))
-        
-        // Create action of reindeer running
-        let actionRunningAnimation = SKAction.animate(with: reindeerRunningTextures, timePerFrame: 0.2, resize: true, restore: true)
+        // Now add the three images we need in the array
+        reindeerRunningRightTextures.append(SKTexture(imageNamed: "deer_01"))
+        reindeerRunningRightTextures.append(SKTexture(imageNamed: "deer_02"))
+        reindeerRunningRightTextures.append(SKTexture(imageNamed: "deer_03"))
 
-        // Create an action that moves reindeer right by 10 pixels
-        let actionMoveRight = SKAction.moveBy(x: 20, y: 0, duration: 0.2)
+        // Create an empty array of SKTexture objects
+        var reindeerRunningLeftTextures: [SKTexture] = []
         
-        // Repeat the move forward action 3 times
+        // Now add the three images we need in the array
+        reindeerRunningLeftTextures.append(SKTexture(imageNamed: "deer_left_01"))
+        reindeerRunningLeftTextures.append(SKTexture(imageNamed: "deer_left_02"))
+        reindeerRunningLeftTextures.append(SKTexture(imageNamed: "deer_left_03"))
+
+        
+        // Create action of reindeer running to the right
+        let actionRunningRightAnimation = SKAction.animate(with: reindeerRunningRightTextures, timePerFrame: 0.25, resize: true, restore: true)
+
+        // Create action of reindeer running to the left twice as fast
+        let actionRunningLeftAnimation = SKAction.animate(with: reindeerRunningLeftTextures, timePerFrame: 0.125, resize: true, restore: true)
+        
+        // Create an action that moves reindeer right by 20 pixels
+        let actionMoveRight = SKAction.moveBy(x: 20, y: 0, duration: 0.25)
+        
+        // Create an action that moves reindeer left by 20 pixels
+        let actionMoveLeft = SKAction.moveBy(x: -20, y: 0, duration: 0.125)
+
+        // Repeat the move right action 3 times
         let actionMoveRightThrice = SKAction.repeat(actionMoveRight, count: 3)
-        
+
+        // Repeat the move left action 3 times
+        let actionMoveLeftThrice = SKAction.repeat(actionMoveLeft, count: 3)
+
         // Combine running animation and moving right
-        let actionMoveAndRun = SKAction.group([actionRunningAnimation, actionMoveRightThrice])
-        
-        // Repeat this five times
-        let actionMoveAndRunManyTimes = SKAction.repeat(actionMoveAndRun, count: 15)
-        
-        // Run the action on the reindeer
-        reindeer.run(actionMoveAndRunManyTimes)
+        let actionMoveAndRunRight = SKAction.group([actionRunningRightAnimation, actionMoveRightThrice])
+
+        // Combine running animation and moving left
+        let actionMoveAndRunLeft = SKAction.group([actionRunningLeftAnimation, actionMoveLeftThrice])
+
+        // Repeat moving right many times
+        let actionMoveAndRunRightManyTimes = SKAction.repeat(actionMoveAndRunRight, count: 10)
+
+        // Repeat moving left many times
+        let actionMoveAndRunLeftManyTimes = SKAction.repeat(actionMoveAndRunLeft, count: 11)
+
+        // Run the actions on the reindeer
+        let actionRunRightThenRunLeftFaster = SKAction.sequence([actionMoveAndRunRightManyTimes, actionMoveAndRunLeftManyTimes])
+        reindeer.run(actionRunRightThenRunLeftFaster)
 
         // Add a middle background to create perspective effect
         let middleBackground = SKSpriteNode(imageNamed: "perspective")

@@ -12,7 +12,7 @@ import PlaygroundSupport    // Allows playground to show live view
 import SpriteKit            // Provides 2D graphics classes
 
 // Define the animation size, scene, and scene color
-let frame = CGRect(x: 0, y: 0, width: 400, height: 300)
+let frame = CGRect(x: 0, y: 0, width: 800, height: 600)
 var scene = SKScene(size: frame.size)
 
 // Define, configure, and present the scene

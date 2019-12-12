@@ -75,60 +75,24 @@ class GameScene: SKScene {
         self.addChild(horizontalShelf)
         
         // Add an H
-        let h = SKLabelNode(fontNamed: "SignPainter")
-        h.fontSize = 144
-        h.fontColor = .white
-        h.text = "H"
-        h.position = CGPoint(x: 200, y: self.size.height - 50)
-        h.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 40, height: 90),
-                                           center: CGPoint(x: 0, y: 35))
-        h.physicsBody?.restitution = 0.3
-        self.addChild(h)
+        add(letter: "H", at: 200)
+        add(letter: "a", at: 250)
+        add(letter: "p", at: 300)
+        add(letter: "p", at: 350)
+        add(letter: "y", at: 400)
 
-        // Add an a
-        let a = SKLabelNode(fontNamed: "SignPainter")
-        a.fontSize = 144
-        a.fontColor = .white
-        a.text = "a"
-        a.position = CGPoint(x: 250, y: self.size.height - 50)
-        a.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 40, height: 90),
+    }
+    
+    func add(letter: String, at x: CGFloat) {
+        let newLetter = SKLabelNode(fontNamed: "SignPainter")
+        newLetter.fontSize = 144
+        newLetter.fontColor = .white
+        newLetter.text = letter
+        newLetter.position = CGPoint(x: x, y: self.size.height - 50)
+        newLetter.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 40, height: 90),
                                            center: CGPoint(x: 0, y: 35))
-        a.physicsBody?.restitution = 0.3
-        self.addChild(a)
-
-        // Add a p
-        let p = SKLabelNode(fontNamed: "SignPainter")
-        p.fontSize = 144
-        p.fontColor = .white
-        p.text = "p"
-        p.position = CGPoint(x: 300, y: self.size.height - 50)
-        p.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 40, height: 90),
-                                           center: CGPoint(x: 0, y: 35))
-        p.physicsBody?.restitution = 0.3
-        self.addChild(p)
-
-        // Add another p
-        let p2 = SKLabelNode(fontNamed: "SignPainter")
-        p2.fontSize = 144
-        p2.fontColor = .white
-        p2.text = "p"
-        p2.position = CGPoint(x: 350, y: self.size.height - 50)
-        p2.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 40, height: 90),
-                                           center: CGPoint(x: 0, y: 35))
-        p2.physicsBody?.restitution = 0.3
-        self.addChild(p2)
-
-        // Add a y
-        let y = SKLabelNode(fontNamed: "SignPainter")
-        y.fontSize = 144
-        y.fontColor = .white
-        y.text = "y"
-        y.position = CGPoint(x: 400, y: self.size.height - 50)
-        y.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 40, height: 90),
-                                           center: CGPoint(x: 0, y: 35))
-        y.physicsBody?.restitution = 0.3
-        self.addChild(y)
-
+        newLetter.physicsBody?.restitution = 0.3
+        self.addChild(newLetter)
 
     }
     

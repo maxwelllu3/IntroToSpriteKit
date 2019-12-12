@@ -3,7 +3,15 @@
  
  Now that you've explored a bit, create an animated holiday card!
  
- Aim to include as many SpriteKit concepts as possible that you've learned about by completing this playground.
+ Here is a 12-second card that Mr. Gordon created.
+ 
+ - Note:
+    If the video appears with black bars around it, once the video starts playing, wiggle (change the size) of the Xcode window a little bit to fix the issue.
+ 
+ ![](happy-holidays-720p.mov poster="happy-holidays-poster.png" width="960" height="720")
+
+  - Experiment:
+ Aim to include as many SpriteKit concepts as possible that you've learned about when you create your holiday card!
  
  */
 

@@ -58,6 +58,16 @@ class GameScene: SKScene {
             groundTile.zPosition = 2 // Ahead of the white rectangle
             self.addChild(groundTile)
         }
+        
+        // Set up snow in the background
+        if let snowstorm = SKEmitterNode(fileNamed: "Snow") {
+
+            // Position the node and add to scene – write the code to make this happen
+            snowstorm.position = CGPoint(x: self.size.width / 2, y: self.size.height)
+            self.addChild(snowstorm)
+            
+        }
+
 
     }
     

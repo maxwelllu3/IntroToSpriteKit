@@ -69,18 +69,49 @@ class GameScene: SKScene {
         }
         
         // Add an edge loop body in the middle of the scene
-        let horizontalShelf = SKSpriteNode(imageNamed: "horizontal-shelf-red")
+        let horizontalShelf = SKSpriteNode(imageNamed: "horizontal-shelf")
         horizontalShelf.position = CGPoint(x: horizontalShelf.size.width / 2, y: self.size.height / 2)
-        horizontalShelf.physicsBody = SKPhysicsBody(edgeLoopFrom: CGRect(x: -400, y: 50, width: 800, height: 1))
+        let physicsBodyLocation = CGRect(x: -400, y: 50, width: 800, height: 1) // relative to sprite's position
+        horizontalShelf.physicsBody = SKPhysicsBody(edgeLoopFrom: physicsBodyLocation)
         self.addChild(horizontalShelf)
         
-        // Add an H
-        add(letter: "H", at: 200)
-        add(letter: "a", at: 250)
-        add(letter: "p", at: 300)
-        add(letter: "p", at: 350)
-        add(letter: "y", at: 400)
+        // Set up actions needed for delayed "Happy"
+        let actionOneSecondWait = SKAction.wait(forDuration: 1)
+        let actionAddH = SKAction.run {
+            self.add(letter: "H", at: 200)
+        }
+        let actionAddA = SKAction.run {
+            self.add(letter: "a", at: 250)
+        }
+        let actionAddP = SKAction.run {
+            self.add(letter: "p", at: 300)
+        }
+        let actionAddP2 = SKAction.run {
+            self.add(letter: "p", at: 350)
+        }
+        let actionAddY = SKAction.run {
+            self.add(letter: "y", at: 400)
+        }
+        
+        // Immediately add the "H"
+        self.run(actionAddH)
+        
+        // Wait a second then add the "a"
+        let actionWaitThenAddA = SKAction.sequence([actionOneSecondWait, actionAddA])
+        self.run(actionWaitThenAddA)
 
+        // Wait two seconds then add the "p"
+        let actionWaitThenAddP = SKAction.sequence([actionOneSecondWait, actionOneSecondWait, actionAddP])
+        self.run(actionWaitThenAddP)
+
+        // Wait three seconds then add the second "p"
+        let actionWaitThenAddP2 = SKAction.sequence([actionOneSecondWait, actionOneSecondWait,  actionOneSecondWait, actionAddP2])
+        self.run(actionWaitThenAddP2)
+
+        // Wait four seconds then add the "y"
+        let actionWaitThenAddY = SKAction.sequence([actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionAddY])
+        self.run(actionWaitThenAddY)
+        
     }
     
     func add(letter: String, at x: CGFloat) {

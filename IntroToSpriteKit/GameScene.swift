@@ -50,6 +50,38 @@ class GameScene: SKScene {
         tree.physicsBody = SKPhysicsBody(edgeLoopFrom: treePhysicsBodyLocation)
         self.addChild(tree)
         
+        // Add a reindeer
+        let reindeer = SKSpriteNode(imageNamed: "deer_01")
+        reindeer.position = CGPoint(x: -50, y: 128 + reindeer.size.height / 2)
+        reindeer.zPosition = 4
+        self.addChild(reindeer)
+        
+        // Create an empty array of SKTexture objects
+        var reindeerRunningTextures: [SKTexture] = []
+        
+        // Now add the two images we need in the array
+        reindeerRunningTextures.append(SKTexture(imageNamed: "deer_01"))
+        reindeerRunningTextures.append(SKTexture(imageNamed: "deer_02"))
+        reindeerRunningTextures.append(SKTexture(imageNamed: "deer_03"))
+        
+        // Create action of reindeer running
+        let actionRunningAnimation = SKAction.animate(with: reindeerRunningTextures, timePerFrame: 0.2, resize: true, restore: true)
+
+        // Create an action that moves reindeer right by 10 pixels
+        let actionMoveRight = SKAction.moveBy(x: 20, y: 0, duration: 0.2)
+        
+        // Repeat the move forward action 3 times
+        let actionMoveRightThrice = SKAction.repeat(actionMoveRight, count: 3)
+        
+        // Combine running animation and moving right
+        let actionMoveAndRun = SKAction.group([actionRunningAnimation, actionMoveRightThrice])
+        
+        // Repeat this five times
+        let actionMoveAndRunManyTimes = SKAction.repeat(actionMoveAndRun, count: 15)
+        
+        // Run the action on the reindeer
+        reindeer.run(actionMoveAndRunManyTimes)
+
         // Add a middle background to create perspective effect
         let middleBackground = SKSpriteNode(imageNamed: "perspective")
         middleBackground.position = CGPoint(x: middleBackground.size.width / 2, y: 178)

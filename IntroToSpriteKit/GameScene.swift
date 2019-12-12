@@ -50,6 +50,34 @@ class GameScene: SKScene {
         tree.physicsBody = SKPhysicsBody(edgeLoopFrom: treePhysicsBodyLocation)
         self.addChild(tree)
         
+        // Define waiting actions
+        let actionShortWait = SKAction.wait(forDuration: 0.5)
+        let actionOneSecondWait = SKAction.wait(forDuration: 1)
+        let actionSixSecondWait = SKAction.wait(forDuration: 6)
+        
+        // Add the yeti behind the tree
+        let yeti = SKSpriteNode(imageNamed: "yeti")
+        yeti.position = CGPoint(x: tree.position.x - 31, y: tree.position.y - yeti.size.height / 4)
+        yeti.zPosition = 4
+        let actionReduceYeti = SKAction.scale(by: 0.5, duration: 0)
+        yeti.run(actionReduceYeti)
+        self.addChild(yeti)
+        
+        // Make the yeti move forward
+        let actionYetiRotateClockWise = SKAction.rotate(byAngle: 0.034, duration: 0.1)
+        let actionYetiRotateCounterClockWise = actionYetiRotateClockWise.reversed()
+        let actionYetiWiggle = SKAction.sequence([actionYetiRotateClockWise, actionYetiRotateCounterClockWise])
+        let actionYetiMoveForward = SKAction.moveBy(x: -1, y: 0, duration: 0.2)
+        let actionYetiWalk = SKAction.group([actionYetiWiggle, actionYetiMoveForward])
+        let actionYetiWalkRepeatedly = SKAction.repeatForever(actionYetiWalk)
+        let actionWaitThenWalk = SKAction.sequence([actionOneSecondWait, actionYetiWalkRepeatedly])
+        yeti.run(actionWaitThenWalk)
+        
+        // Add the yeti warning after a bit of a delay
+        let actionAddWarning = SKAction.run(addYetiWarning)
+        let actionWaitThenWarning = SKAction.sequence([actionSixSecondWait, actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionAddWarning])
+        self.run(actionWaitThenWarning)
+        
         // Add a reindeer
         let reindeer = SKSpriteNode(imageNamed: "deer_01")
         reindeer.position = CGPoint(x: -50, y: 128 + reindeer.size.height / 2)
@@ -72,7 +100,6 @@ class GameScene: SKScene {
         reindeerRunningLeftTextures.append(SKTexture(imageNamed: "deer_left_02"))
         reindeerRunningLeftTextures.append(SKTexture(imageNamed: "deer_left_03"))
 
-        
         // Create action of reindeer running to the right
         let actionRunningRightAnimation = SKAction.animate(with: reindeerRunningRightTextures, timePerFrame: 0.25, resize: true, restore: true)
 
@@ -138,9 +165,6 @@ class GameScene: SKScene {
         self.addChild(horizontalShelf)
         
         // Set up actions needed for delayed "Happy"
-        let actionShortWait = SKAction.wait(forDuration: 0.5)
-        let actionOneSecondWait = SKAction.wait(forDuration: 1)
-        let actionSixSecondWait = SKAction.wait(forDuration: 6)
         let actionAddH = SKAction.run {
             self.add(letter: "H", at: 200)
         }
@@ -241,6 +265,25 @@ class GameScene: SKScene {
         let actionWaitThenAddHFromLeft = SKAction.sequence([actionSixSecondWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionShortWait, actionAddHFromLeft])
         self.run(actionWaitThenAddHFromLeft)
 
+
+    }
+    
+    // Add yeti warning
+    func addYetiWarning() {
+
+        // Make a reminder text
+        let reminder = SKLabelNode(fontNamed: "SignPainter")
+        reminder.fontSize = 48
+        reminder.fontColor = .white
+        reminder.text = "...and keep an eye out for yeti's!"
+        reminder.zPosition = 3
+        reminder.position = CGPoint(x: self.size.width / 2 - 50, y: 200)
+        reminder.alpha = 0
+        self.addChild(reminder)
+        
+        // Fade the warning in
+        let actionFadeIn = SKAction.fadeIn(withDuration: 2.0)
+        reminder.run(actionFadeIn)
 
     }
     

@@ -280,7 +280,7 @@ class GameScene: SKScene {
         let reminder = SKLabelNode(fontNamed: "SignPainter")
         reminder.fontSize = 48
         reminder.fontColor = .white
-        reminder.text = "...and keep an eye out for yeti's!"
+        reminder.text = "...and keep an eye out for yetis!"
         reminder.zPosition = 3
         reminder.position = CGPoint(x: self.size.width / 2 - 50, y: 200)
         reminder.alpha = 0

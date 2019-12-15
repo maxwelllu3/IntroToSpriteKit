@@ -57,7 +57,7 @@ class GameScene: SKScene {
         
         // Set sequence to wait then remove all nodes and show end credits
         let actionShowEndCredits = SKAction.run(removeEverythingThenShowEndCredits)
-        let actionWaitThenShowEndCredits = SKAction.sequence([actionSixSecondWait, actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionShowEndCredits])
+        let actionWaitThenShowEndCredits = SKAction.sequence([actionSixSecondWait, actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionShowEndCredits])
         self.run(actionWaitThenShowEndCredits)
         
         // Add the yeti behind the tree

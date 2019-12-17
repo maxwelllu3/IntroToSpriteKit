@@ -101,7 +101,20 @@ class GameScene: SKScene {
             }
 
         }
+        
+        // Define an action that causes a node to wait (do nothing)
+        let actionFiveSecondWait = SKAction.wait(forDuration: 5.0)
 
+        // Define a vector that describes an upward movement
+        let moveLeftThisMuch = CGVector(dx: 0, dy: 250)
+
+        // Define an action that causes a node to move up for half a second
+        let actionLeftMovement = SKAction.move(by: moveLeftThisMuch, duration: 0.5)
+
+        
+        
+        
+        
         let text = SKSpriteNode(imageNamed: "text")
         text.position = CGPoint(x: 600, y: 450)
         self.addChild(text)

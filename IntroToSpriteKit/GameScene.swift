@@ -88,15 +88,20 @@ class GameScene: SKScene {
                 // Only the snowcubes
                 if thisNode.name == "one of the snowcubes" {
                     // Add a physics body
-                    thisNode.physicsBody?.restitution = 0.7
+                    thisNode.physicsBody?.restitution = 0.5
                 }
             }
         }
         
-        // Add the Santa Claus into the scene
+        // Add a Santa into the scene
         let santa = SKSpriteNode(imageNamed: "santa")
         santa.position = CGPoint(x: 950, y: 500)
         self.addChild(santa)
+        
+        // Add another Santa into the scene
+        let santa2 = SKSpriteNode(imageNamed: "santa2")
+        santa2.position = CGPoint(x: -150, y: 500)
+        self.addChild(santa2)
         
         // Add the text saying "Merry Christmas!" into the scene
         let text = SKSpriteNode(imageNamed: "text")
@@ -109,22 +114,27 @@ class GameScene: SKScene {
         self.addChild(tux)
         
         // Define the actions that causes a node to wait (do nothing)
-        let actionOneSecondWait = SKAction.wait(forDuration: 1.0)
-
+        let actionOneSecondWait = SKAction.wait(forDuration: 1)
+        let actionSixSecondWait = SKAction.wait(forDuration: 6)
+        
         // Define the vectors that describes the movement
         let moveLeftSanta = CGVector(dx: -1100, dy: 0)
+        let moveRightSanta = CGVector(dx: 1100, dy: 0)
         let moveLeftText = CGVector(dx: -400, dy: 0)
         let moveUpTux = CGVector(dx: 0, dy: 50)
         let moveDownTux = CGVector(dx: 0, dy: -50)
         
         // Define the actions that causes athe specified node to move
         let actionLeftSanta = SKAction.move(by: moveLeftSanta, duration: 5)
+        let actionRightSanta = SKAction.move(by: moveRightSanta, duration: 5)
         let actionLeftText = SKAction.move(by: moveLeftText, duration: 2.5)
         let actionUpTux = SKAction.move(by: moveUpTux, duration: 0.3)
         let actionDownTux = SKAction.move(by: moveDownTux, duration: 0.2)
         
-        // Run the action assigned to Santa
+        // Run the action assigned to the two Santas
         santa.run(actionLeftSanta)
+        let actionWaitThenMoveRightSanta = SKAction.sequence([actionSixSecondWait, actionRightSanta])
+        santa2.run(actionWaitThenMoveRightSanta)
         
         // Run the action assigned to Text
             // Make a sequence of the actions that would assign to Text
@@ -142,42 +152,39 @@ class GameScene: SKScene {
         // Remove everything and show end credits
         func removeEverythingThenShowEndCredits() {
 
-            // Remove all existing children nodes
-            self.removeAllChildren()
+        // Remove all existing children nodes
+        self.removeAllChildren()
 
-            // Change background to black
-            self.backgroundColor = .black
+        // Change background to black
+        self.backgroundColor = .black
 
-            // Add end credits
+        // Add end credits
             
-            // By...
-            let by = SKLabelNode(fontNamed: "Luminari")
+        // By...
+        let by = SKLabelNode(fontNamed: "Luminari")
             by.fontSize = 45
             by.fontColor = .white
             by.text = "Brought to you by Maxwell Lu"
             by.zPosition = 3
             by.position = CGPoint(x: self.size.width / 2, y: self.size.height / 2 + 50)
-            self.addChild(by)
+        self.addChild(by)
 
             // And...
-            let and = SKLabelNode(fontNamed: "Luminari")
+        let and = SKLabelNode(fontNamed: "Luminari")
             and.fontSize = 36
             and.fontColor = .white
             and.text = "and the Grade 12 AP Computer Science class"
             and.zPosition = 3
             and.position = CGPoint(x: self.size.width / 2, y: self.size.height / 2 - 50)
-            self.addChild(and)
+        self.addChild(and)
 
         }
         
-        let actionSixSecondWait = SKAction.wait(forDuration: 6)
-        // Set sequence to wait then remove all nodes and show end credits
-               let actionShowEndCredits = SKAction.run(removeEverythingThenShowEndCredits)
-               let actionWaitThenShowEndCredits = SKAction.sequence([actionSixSecondWait, actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionShowEndCredits])
-               self.run(actionWaitThenShowEndCredits)
-        
+    // Set sequence to wait then remove all nodes and show end credits
+        let actionShowEndCredits = SKAction.run(removeEverythingThenShowEndCredits)
+        let actionWaitThenShowEndCredits = SKAction.sequence([actionSixSecondWait, actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionShowEndCredits])
+        self.run(actionWaitThenShowEndCredits)
     }
-    
     
     // This runs before each frame is rendered
     // Avoid putting computationally intense code in this function to maintain high performance

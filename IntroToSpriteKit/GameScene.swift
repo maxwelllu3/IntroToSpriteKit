@@ -104,25 +104,29 @@ class GameScene: SKScene {
         
         // Add the Santa Claus into the scene
         let santa = SKSpriteNode(imageNamed: "santa")
-        santa.position = CGPoint(x: 800, y: 500)
+        santa.position = CGPoint(x: 950, y: 500)
         self.addChild(santa)
         
+        // Add the text saying "Merry Christmas!" into the scene
+        let text = SKSpriteNode(imageNamed: "text")
+        text.position = CGPoint(x: 1000, y: 450)
+        self.addChild(text)
+        
         // Define an action that causes a node to wait (do nothing)
-        let actionFiveSecondWait = SKAction.wait(forDuration: 5.0)
+        let actionTwoSecondWait = SKAction.wait(forDuration: 1.0)
 
         // Define a vector that describes an upward movement
-        let moveLeftThisMuch = CGVector(dx: 0, dy: 250)
-
-        // Define an action that causes a node to move up for half a second
-        let actionLeftMovement = SKAction.move(by: moveLeftThisMuch, duration: 0.5)
-
+        let moveLeftSanta = CGVector(dx: -1100, dy: 0)
+        let moveLeftText = CGVector(dx: -400, dy: 0)
         
+        // Define an action that causes athe specified node to move
+        let actionLeftSanta = SKAction.move(by: moveLeftSanta, duration: 5)
+        let actionLeftText = SKAction.move(by: moveLeftText, duration: 2.5)
         
+        santa.run(actionLeftSanta)
+        let actionWaitThenMoveLeftText = SKAction.sequence([actionTwoSecondWait, actionLeftText])
+        text.run(actionWaitThenMoveLeftText)
         
-        
-        let text = SKSpriteNode(imageNamed: "text")
-        text.position = CGPoint(x: 600, y: 450)
-        self.addChild(text)
 
     }
     

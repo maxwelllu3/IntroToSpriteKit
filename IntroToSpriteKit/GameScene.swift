@@ -102,6 +102,11 @@ class GameScene: SKScene {
 
         }
         
+        // Add the Santa Claus into the scene
+        let santa = SKSpriteNode(imageNamed: "santa")
+        santa.position = CGPoint(x: 800, y: 500)
+        self.addChild(santa)
+        
         // Define an action that causes a node to wait (do nothing)
         let actionFiveSecondWait = SKAction.wait(forDuration: 5.0)
 

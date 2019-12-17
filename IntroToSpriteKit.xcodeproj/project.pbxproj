@@ -16,6 +16,7 @@
 		30EF27EE23A94EF000AB15DC /* snowcube.png in Resources */ = {isa = PBXBuildFile; fileRef = 30EF27E823A94EEF00AB15DC /* snowcube.png */; };
 		30EF27EF23A94EF000AB15DC /* snowhill.png in Resources */ = {isa = PBXBuildFile; fileRef = 30EF27E923A94EF000AB15DC /* snowhill.png */; };
 		30EF27F123A9547800AB15DC /* santa.png in Resources */ = {isa = PBXBuildFile; fileRef = 30EF27F023A9547800AB15DC /* santa.png */; };
+		30EF27F323A959FB00AB15DC /* tux.png in Resources */ = {isa = PBXBuildFile; fileRef = 30EF27F223A959FB00AB15DC /* tux.png */; };
 		81279437239BEC4C000EBED0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81279436239BEC4C000EBED0 /* AppDelegate.swift */; };
 		8127943D239BEC4C000EBED0 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127943C239BEC4C000EBED0 /* GameScene.swift */; };
 		8127943F239BEC4C000EBED0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127943E239BEC4C000EBED0 /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 		30EF27E823A94EEF00AB15DC /* snowcube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowcube.png; sourceTree = "<group>"; };
 		30EF27E923A94EF000AB15DC /* snowhill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowhill.png; sourceTree = "<group>"; };
 		30EF27F023A9547800AB15DC /* santa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = santa.png; sourceTree = "<group>"; };
+		30EF27F223A959FB00AB15DC /* tux.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tux.png; sourceTree = "<group>"; };
 		81279433239BEC4C000EBED0 /* IntroToSpriteKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntroToSpriteKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81279436239BEC4C000EBED0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8127943C239BEC4C000EBED0 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				30EF27E823A94EEF00AB15DC /* snowcube.png */,
 				30EF27E923A94EF000AB15DC /* snowhill.png */,
 				30EF27E423A94EEF00AB15DC /* text.png */,
+				30EF27F223A959FB00AB15DC /* tux.png */,
 				30EF27E523A94EEF00AB15DC /* tree.png */,
 				0E0C826423A16E0600DC5990 /* sleigh-bells-excerpt.mp3 */,
 				0EF3302923A0433100A83858 /* Fire.sks */,
@@ -156,6 +159,7 @@
 				0EF3302A23A0433100A83858 /* Fire.sks in Resources */,
 				30EF27EF23A94EF000AB15DC /* snowhill.png in Resources */,
 				30EF27ED23A94EF000AB15DC /* snowball.png in Resources */,
+				30EF27F323A959FB00AB15DC /* tux.png in Resources */,
 				30EF27EA23A94EF000AB15DC /* text.png in Resources */,
 				30EF27EE23A94EF000AB15DC /* snowcube.png in Resources */,
 				30EF27EC23A94EF000AB15DC /* background.png in Resources */,

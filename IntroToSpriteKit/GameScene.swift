@@ -34,12 +34,12 @@ class GameScene: SKScene {
         tree.position = CGPoint(x: 150, y: 350)
         self.addChild(tree)
 
-        // Create and position a boulder sprite near the top left corner of the screen
+        // Create and position a snowball sprite near the top left corner of the screen
         let snowball = SKSpriteNode(imageNamed: "snowball")
         snowball.position = CGPoint(x: 100, y: self.size.height - snowball.size.height / 2)
         self.addChild(snowball)
 
-        // Position six crates in a pyramid
+        // Position six snowcubes in a pyramid
         for i in 1...5 {
             for j in 0...5 - i {
                 let snowcube = SKSpriteNode(imageNamed: "snowcube")
@@ -49,13 +49,13 @@ class GameScene: SKScene {
             }
         }
         
-        // Add a physics body for the snow hill
+        // Add a physics body for the snowhill
         snowhill.physicsBody = SKPhysicsBody(texture: snowhill.texture!,
                                          alphaThreshold: 0.5,
                                          size: snowhill.size)
-        snowhill.physicsBody?.isDynamic = false // snow hill will not move (not impacted by physics)
+        snowhill.physicsBody?.isDynamic = false // snowhill will not move (not impacted by physics)
 
-        // Add a physics body for the boulder
+        // Add a physics body for the snowball
         snowball.physicsBody = SKPhysicsBody(circleOfRadius: snowball.size.width * 0.5)
 
         // Add a physics body for all nodes with identifier "one of the snowcubes"
@@ -63,16 +63,12 @@ class GameScene: SKScene {
 
             // Only look at nodes of type SKSpriteNode
             if let thisNode = node as? SKSpriteNode {
-
                 // Only the snowcubes
                 if thisNode.name == "one of the snowcubes" {
-
                     // Add a physics body
                     thisNode.physicsBody = SKPhysicsBody(rectangleOf: thisNode.size)
                 }
-
             }
-
         }
 
         // Configure the view so that physics body edges are visible
@@ -81,25 +77,20 @@ class GameScene: SKScene {
         // Make an edge loop at the boundaries of the scene
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: self.frame)
 
-        // Change the snowball's mass
+        // Change the snowball's physical traits
         snowball.physicsBody?.mass = 50
-
         snowball.physicsBody?.restitution = 1
 
+        // Change the snowcubes' physical traits
         for node in self.children {
-
             // Only look at nodes of type SKSpriteNode
             if let thisNode = node as? SKSpriteNode {
-
-                // Only the crates
+                // Only the snowcubes
                 if thisNode.name == "one of the snowcubes" {
-
                     // Add a physics body
                     thisNode.physicsBody?.restitution = 0.7
                 }
-
             }
-
         }
         
         // Add the Santa Claus into the scene
@@ -112,22 +103,79 @@ class GameScene: SKScene {
         text.position = CGPoint(x: 1000, y: 450)
         self.addChild(text)
         
-        // Define an action that causes a node to wait (do nothing)
-        let actionTwoSecondWait = SKAction.wait(forDuration: 1.0)
+        // Add tux the penguin into the scene
+        let tux = SKSpriteNode(imageNamed: "tux")
+        tux.position = CGPoint(x: 100, y: 100)
+        self.addChild(tux)
+        
+        // Define the actions that causes a node to wait (do nothing)
+        let actionOneSecondWait = SKAction.wait(forDuration: 1.0)
 
-        // Define a vector that describes an upward movement
+        // Define the vectors that describes the movement
         let moveLeftSanta = CGVector(dx: -1100, dy: 0)
         let moveLeftText = CGVector(dx: -400, dy: 0)
+        let moveUpTux = CGVector(dx: 0, dy: 50)
+        let moveDownTux = CGVector(dx: 0, dy: -50)
         
-        // Define an action that causes athe specified node to move
+        // Define the actions that causes athe specified node to move
         let actionLeftSanta = SKAction.move(by: moveLeftSanta, duration: 5)
         let actionLeftText = SKAction.move(by: moveLeftText, duration: 2.5)
+        let actionUpTux = SKAction.move(by: moveUpTux, duration: 0.3)
+        let actionDownTux = SKAction.move(by: moveDownTux, duration: 0.2)
         
+        // Run the action assigned to Santa
         santa.run(actionLeftSanta)
-        let actionWaitThenMoveLeftText = SKAction.sequence([actionTwoSecondWait, actionLeftText])
+        
+        // Run the action assigned to Text
+            // Make a sequence of the actions that would assign to Text
+        let actionWaitThenMoveLeftText = SKAction.sequence([actionOneSecondWait, actionLeftText])
+            // Run the sequence
         text.run(actionWaitThenMoveLeftText)
         
+        // Run the action assigned to Tux
+            // Make a sequence of the actions that would assign to Tux
+        let actionWaitThenMoveUpAndDownTux = SKAction.sequence([actionOneSecondWait, actionUpTux, actionDownTux])
+            // Repeat the action assigned to Tux
+        let actionTux = SKAction.repeatForever(actionWaitThenMoveUpAndDownTux)
+        tux.run(actionTux)
+        
+        // Remove everything and show end credits
+        func removeEverythingThenShowEndCredits() {
 
+            // Remove all existing children nodes
+            self.removeAllChildren()
+
+            // Change background to black
+            self.backgroundColor = .black
+
+            // Add end credits
+            
+            // By...
+            let by = SKLabelNode(fontNamed: "Luminari")
+            by.fontSize = 45
+            by.fontColor = .white
+            by.text = "Brought to you by Maxwell Lu"
+            by.zPosition = 3
+            by.position = CGPoint(x: self.size.width / 2, y: self.size.height / 2 + 50)
+            self.addChild(by)
+
+            // And...
+            let and = SKLabelNode(fontNamed: "Luminari")
+            and.fontSize = 36
+            and.fontColor = .white
+            and.text = "and the Grade 12 AP Computer Science class"
+            and.zPosition = 3
+            and.position = CGPoint(x: self.size.width / 2, y: self.size.height / 2 - 50)
+            self.addChild(and)
+
+        }
+        
+        let actionSixSecondWait = SKAction.wait(forDuration: 6)
+        // Set sequence to wait then remove all nodes and show end credits
+               let actionShowEndCredits = SKAction.run(removeEverythingThenShowEndCredits)
+               let actionWaitThenShowEndCredits = SKAction.sequence([actionSixSecondWait, actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionOneSecondWait, actionShowEndCredits])
+               self.run(actionWaitThenShowEndCredits)
+        
     }
     
     

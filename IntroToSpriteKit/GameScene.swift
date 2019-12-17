@@ -18,6 +18,8 @@ class GameScene: SKScene {
     // This function runs once to set up the scene
     override func didMove(to view: SKView) {
         
+        // Remember to use "self" not "scene"
+        
         // Set the background colour
         self.backgroundColor = .black
         

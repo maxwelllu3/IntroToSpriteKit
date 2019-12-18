@@ -100,7 +100,7 @@ class GameScene: SKScene {
         
         // Add another Santa into the scene
         let santa2 = SKSpriteNode(imageNamed: "santa2")
-        santa2.position = CGPoint(x: -150, y: 500)
+        santa2.position = CGPoint(x: -150, y: 550)
         self.addChild(santa2)
         
         // Add the text saying "Merry Christmas!" into the scene
@@ -115,11 +115,13 @@ class GameScene: SKScene {
         
         // Define the actions that causes a node to wait (do nothing)
         let actionOneSecondWait = SKAction.wait(forDuration: 1)
+        let actionThreeSecondWait = SKAction.wait(forDuration: 2)
         let actionSixSecondWait = SKAction.wait(forDuration: 6)
         
         // Define the vectors that describes the movement
         let moveLeftSanta = CGVector(dx: -1100, dy: 0)
         let moveRightSanta = CGVector(dx: 1100, dy: 0)
+        let moveUpSanta = CGVector(dx: 0, dy: 100)
         let moveLeftText = CGVector(dx: -400, dy: 0)
         let moveUpTux = CGVector(dx: 0, dy: 50)
         let moveDownTux = CGVector(dx: 0, dy: -50)
@@ -127,6 +129,7 @@ class GameScene: SKScene {
         // Define the actions that causes athe specified node to move
         let actionLeftSanta = SKAction.move(by: moveLeftSanta, duration: 5)
         let actionRightSanta = SKAction.move(by: moveRightSanta, duration: 5)
+        let actionUpSanta = SKAction.move(by: moveUpSanta, duration: 0.5)
         let actionLeftText = SKAction.move(by: moveLeftText, duration: 2.5)
         let actionUpTux = SKAction.move(by: moveUpTux, duration: 0.3)
         let actionDownTux = SKAction.move(by: moveDownTux, duration: 0.2)
